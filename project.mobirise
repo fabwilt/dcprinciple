@@ -255,7 +255,7 @@
         "css": "'Inter Tight', sans-serif"
       }
     ],
-    "uniqCompNum": 37,
+    "uniqCompNum": 38,
     "imageResize": true,
     "screenshot": "screenshot.png",
     "favicon": false,
@@ -271,7 +271,8 @@
       "colorLink": "#149dcc",
       "underlineLink": false,
       "text": "By continuing you agree to our <a href='terms.html'>Terms of Service</a> and <a href='policy.html'>Privacy Policy</a>."
-    }
+    },
+    "publishChangesOnly": true
   },
   "pages": {
     "index.html": {
@@ -424,61 +425,9 @@
           },
           "_name": "features026",
           "_sourceTheme": "startm5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"features026\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\t<mbr-parameters>\n\t\t<header>Size</header>\n\t\t<input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showMainTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showMainSubtitle\" checked>\n\t\t<header>Card</header>\n\t\t<input type=\"checkbox\" title=\"Image\" name=\"showImage\" checked>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n\t\t<input type=\"checkbox\" title=\"Price\" name=\"showPrice\">\n\t\t<input type=\"checkbox\" title=\"Button\" name=\"showButtons\">\n\t\t<select title=\"Columns\" name=\"columns\">\n\t\t\t<option value=\"12\">1</option>\n\t\t\t<option value=\"6\" selected>2</option>\n\t\t\t<option value=\"4\">3</option>\n\t\t\t<option value=\"3\">4</option>\n\t\t</select>\n\t\t<input type=\"color\" title=\"Card BG\" name=\"cardbg\" value=\"#ffffff\" selected>\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#edefeb\" selected>\n\t\t\t<input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n\t\t</fieldset>\n\t\t<header condition=\"bg.type === 'video'\">Fallback Image</header>\n\t\t<input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n\t</mbr-parameters>\n\n\t<div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n\t<div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n\t\t<div class=\"row mb-5 justify-content-center\" mbr-if=\"showMainTitle || showMainSubtitle\">\n\t\t\t<div class=\"col-12 mb-0 content-head\">\n\t\t\t\t<h3 class=\"mbr-section-title mbr-fonts-style align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showMainTitle\" data-app-selector=\".mbr-section-title\"><b>Unlocking Value</b></h3>\n\t\t\t\t<h5 class=\"mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4\" mbr-theme-style=\"display-7\" mbr-if=\"showMainSubtitle\" data-app-selector=\".mbr-section-subtitle\">Logistics, Information Technology and Procurement Solutions that Drive Results.</h5>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"row\">\n\t\t\t<div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}} item-mb\">\n\t\t\t\t<div class=\"item-wrapper\">\n\t\t\t\t\t<div class=\"card-box align-left\">\n\t\t\t\t\t\t<div class=\"img-wrapper mb-3\" mbr-if=\"showImage\">\n\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/mbr-160x107.jpg\" alt>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<h5 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .img-wrapper\"><b>Streamline your international logistics</b></h5>\n\t\t\t\t\t\t<p class=\"price mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showPrice\" data-app-selector=\".price\">\n\t\t\t\t\t\t\t$1,500 - $5,000\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text, .mbr-section-btn\">\n\t\t\t\t\t\t\tOptimize your supply chain, navigate customs regulations, and reduce costs with our logistics experts.</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn mt-auto\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-lg btn-primary\" data-app-placeholder=\"Type Text\"></a></div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}} item-mb\">\n\t\t\t\t<div class=\"item-wrapper\">\n\t\t\t\t\t<div class=\"card-box align-left\">\n\t\t\t\t\t\t<div class=\"img-wrapper mb-3\" mbr-if=\"showImage\">\n\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/mbr-1-160x107.jpg\" alt>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<h5 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .img-wrapper\"><b>Embrace digital transformation</b></h5>\n\t\t\t\t\t\t<p class=\"price mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showPrice\" data-app-selector=\".price\">\n\t\t\t\t\t\t\t$100 - $500 per design\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text, .mbr-section-btn\">\n\t\t\t\t\t\t\tImplement cutting-edge IT solutions, improve data security, and boost efficiency with our technology consultants\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn mt-auto\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-lg btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Buy now</a></div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}} item-mb\">\n\t\t\t\t<div class=\"item-wrapper\">\n\t\t\t\t\t<div class=\"card-box align-left\">\n\t\t\t\t\t\t<div class=\"img-wrapper mb-3\" mbr-if=\"showImage\">\n\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/mbr-1-160x69.jpeg\" alt>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<h5 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .img-wrapper\"><b><a href=\"Procurement.html\" class=\"text-primary\">Procurement</a></b></h5>\n\t\t\t\t\t\t<p class=\"price mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showPrice\" data-app-selector=\".price\">\n\t\t\t\t\t\t\t$2,000 - $10,000\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text, .mbr-section-btn\">\n\t\t\t\t\t\t\tNavigating the complexities of government procurement can be challenging. At D &amp; C Principle Consulting, we understand the unique needs of government agencies and are dedicated to providing a seamless and efficient procurement experience.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn mt-auto\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-lg btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Learn More</a></div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}} item-mb\">\n\t\t\t\t<div class=\"item-wrapper\">\n\t\t\t\t\t<div class=\"card-box align-left\">\n\t\t\t\t\t\t<div class=\"img-wrapper mb-3\" mbr-if=\"showImage\">\n\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/mbr-160x90.jpg\" alt>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<h5 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .img-wrapper\"><b>Elevate your overall performance</b></h5>\n\t\t\t\t\t\t<p class=\"price mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showPrice\" data-app-selector=\".price\">\n\t\t\t\t\t\t\t$500 - $2,500 per month\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text, .mbr-section-btn\">\n\t\t\t\t\t\t\tLeverage our general management consulting expertise to gain a competitive edge.</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn mt-auto\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n\t\t\t\t\t\t  <a class=\"btn btn-lg btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Buy now</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"features026\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\t<mbr-parameters>\n\t\t<header>Size</header>\n\t\t<input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showMainTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showMainSubtitle\" checked>\n\t\t<header>Card</header>\n\t\t<input type=\"checkbox\" title=\"Image\" name=\"showImage\" checked>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n\t\t<input type=\"checkbox\" title=\"Price\" name=\"showPrice\">\n\t\t<input type=\"checkbox\" title=\"Button\" name=\"showButtons\" checked>\n\t\t<select title=\"Columns\" name=\"columns\">\n\t\t\t<option value=\"12\">1</option>\n\t\t\t<option value=\"6\" selected>2</option>\n\t\t\t<option value=\"4\">3</option>\n\t\t\t<option value=\"3\">4</option>\n\t\t</select>\n\t\t<input type=\"color\" title=\"Card BG\" name=\"cardbg\" value=\"#ffffff\" selected>\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#edefeb\" selected>\n\t\t\t<input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n\t\t</fieldset>\n\t\t<header condition=\"bg.type === 'video'\">Fallback Image</header>\n\t\t<input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n\t</mbr-parameters>\n\n\t<div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n\t<div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n\t\t<div class=\"row mb-5 justify-content-center\" mbr-if=\"showMainTitle || showMainSubtitle\">\n\t\t\t<div class=\"col-12 mb-0 content-head\">\n\t\t\t\t<h3 class=\"mbr-section-title mbr-fonts-style align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showMainTitle\" data-app-selector=\".mbr-section-title\"><b>Unlocking Value</b></h3>\n\t\t\t\t<h5 class=\"mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4\" mbr-theme-style=\"display-7\" mbr-if=\"showMainSubtitle\" data-app-selector=\".mbr-section-subtitle\">Logistics, Information Technology and Procurement Solutions that Drive Results.</h5>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"row\">\n\t\t\t<div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}} item-mb\">\n\t\t\t\t<div class=\"item-wrapper\">\n\t\t\t\t\t<div class=\"card-box align-left\">\n\t\t\t\t\t\t<div class=\"img-wrapper mb-3\" mbr-if=\"showImage\">\n\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/mbr-160x107.jpg\" alt>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<h5 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .img-wrapper\"><b>Streamline your international logistics</b></h5>\n\t\t\t\t\t\t<p class=\"price mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showPrice\" data-app-selector=\".price\">\n\t\t\t\t\t\t\t$1,500 - $5,000\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text, .mbr-section-btn\">\n\t\t\t\t\t\t\tOptimize your supply chain, navigate customs regulations, and reduce costs with our logistics experts.</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn mt-auto\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-lg btn-primary\" data-app-placeholder=\"Type Text\"></a></div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}} item-mb\">\n\t\t\t\t<div class=\"item-wrapper\">\n\t\t\t\t\t<div class=\"card-box align-left\">\n\t\t\t\t\t\t<div class=\"img-wrapper mb-3\" mbr-if=\"showImage\">\n\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/mbr-1-160x107.jpg\" alt>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<h5 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .img-wrapper\"><b>Embrace digital transformation</b></h5>\n\t\t\t\t\t\t<p class=\"price mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showPrice\" data-app-selector=\".price\">\n\t\t\t\t\t\t\t$100 - $500 per design\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text, .mbr-section-btn\">\n\t\t\t\t\t\t\tImplement cutting-edge IT solutions, improve data security, and boost efficiency with our technology consultants\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn mt-auto\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-lg btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Buy now</a></div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}} item-mb\">\n\t\t\t\t<div class=\"item-wrapper\">\n\t\t\t\t\t<div class=\"card-box align-left\">\n\t\t\t\t\t\t<div class=\"img-wrapper mb-3\" mbr-if=\"showImage\">\n\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/mbr-1-160x69.jpeg\" alt>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<h5 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .img-wrapper\"><a href=\"Procurement.html\" class=\"text-primary\"><b>Procurement</b></a></h5>\n\t\t\t\t\t\t<p class=\"price mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showPrice\" data-app-selector=\".price\">\n\t\t\t\t\t\t\t$2,000 - $10,000\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text, .mbr-section-btn\">\n\t\t\t\t\t\t\tNavigating the complexities of government procurement can be challenging. At D &amp; C Principle Consulting, we understand the unique needs of government agencies and are dedicated to providing a seamless and efficient procurement experience.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn mt-auto\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-lg btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Learn More</a></div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}} item-mb\">\n\t\t\t\t<div class=\"item-wrapper\">\n\t\t\t\t\t<div class=\"card-box align-left\">\n\t\t\t\t\t\t<div class=\"img-wrapper mb-3\" mbr-if=\"showImage\">\n\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/mbr-160x90.jpg\" alt>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<h5 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .img-wrapper\"><b>Elevate your overall performance</b></h5>\n\t\t\t\t\t\t<p class=\"price mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showPrice\" data-app-selector=\".price\">\n\t\t\t\t\t\t\t$500 - $2,500 per month\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text, .mbr-section-btn\">\n\t\t\t\t\t\t\tLeverage our general management consulting expertise to gain a competitive edge.</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn mt-auto\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-lg btn-primary\" data-app-placeholder=\"Type Text\"></a></div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
           "_cid": "u3zpwUT4Rx",
           "_anchor": "features026-r",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "& when not (@fullScreen)": {
-              "padding-top": "(@paddingTop * 1rem)",
-              "padding-bottom": "(@paddingBottom * 1rem)"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            ".mbr-fallback-image.disabled": {
-              "display": "none"
-            },
-            ".mbr-fallback-image": {
-              "display": "block",
-              "background-size": "cover",
-              "background-position": "center center",
-              "width": "100%",
-              "height": "100%",
-              "position": "absolute",
-              "top": "0",
-              "& when (@bg-type = 'video')": {
-                "background-image": "url(@fallBackImage)"
-              }
-            },
-            ".card-wrapper": {
-              "background": "@cardbg",
-              "padding": "2.5rem",
-              "@media (max-width: 992px)": {
-                "margin-bottom": "2rem"
-              },
-              "@media (max-width: 767px)": {
-                "padding": "1.5rem"
-              }
-            },
-            ".row": {
-              "justify-content": "space-between"
-            }
-          },
-          "_name": "header06",
-          "_sourceTheme": "startm5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"header6\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n\t<mbr-parameters>\n\t\t<header>Size</header>\n\t\t<input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n\t\t<input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"12\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"12\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showSubitle\">\n\t\t<input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n\t\t<input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked>\n\n\t\t<header>Card</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showcardTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Text\" name=\"showcardText\" checked>\n\t\t<input type=\"color\" title=\"Background\" name=\"cardbg\" value=\"#ffffff\" selected>\n\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#edefeb\" selected>\n\t\t\t<input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n\t\t</fieldset>\n\t\t<header condition=\"bg.type === 'video'\">Fallback Image</header>\n\t\t<input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n\t</mbr-parameters>\n\n\t<div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n\t<div class mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-12 col-lg-5\">\n\t\t\t\t<div class=\"card-wrapper\">\n\t\t\t\t\t<h3 class=\"mbr-section-cardtitle mbr-fonts-style mb-2\" data-app-selector=\".mbr-section-cardtitle\" mbr-theme-style=\"display-5\" mbr-if=\"showcardTitle\">\n\t\t\t\t\t\t<b>Unleash your genius</b>\n\t\t\t\t\t</h3>\n\n\t\t\t\t\t<p class=\"mbr-cardtext mbr-fonts-style mb-0\" mbr-theme-style=\"display-7\" mbr-if=\"showcardText\" data-app-selector=\".mbr-cardtext, .mbr-section-btn\">\n\t\t\t\t\tNavigate even the most complex business challenges with our proven approach. We leverage cutting-edge frameworks and methodologies to seamlessly guide you through technology implementations, system integrations, and operational transformations. Our expertise impacts every corner of your organization, from streamlining your workforce to optimizing product lines and revamping business processes. Let us help you achieve breakthrough results and unlock your full potential.\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"col-12 col-lg-6\">\n\t\t\t\t<h1 class=\"mbr-section-title mbr-fonts-style mb-4\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">\n\t\t\t\t\t<b>Capabilities Statement</b></h1>\n\t\t\t\t<h2 class=\"mbr-section-subtitle mbr-fonts-style mb-4\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\" mbr-if=\"showSubitle\">\n\t\t\t\t\tSubtitle\n\t\t\t\t</h2>\n\t\t\t\t<p class=\"mbr-text mbr-fonts-style mb-4\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><p><b>DESIGNATIONS\n</b><br>• CAGE Code: 9MC36\n<br>• DUNS#: 112964760\n<br><br><b>NAICS CODES\n</b><br>541611&nbsp;&nbsp;&nbsp;&nbsp;Administrative Mgmt and General Mgmt&nbsp;Consulting (Primary)\n<br>488510&nbsp; General Freight Trucking Local<br>488320&nbsp;&nbsp;Marine Cargo Handling<br><br><b>General Freight Trucking Local&nbsp;Marine Cargo Handling\n</b><br>541330 Engineering Services\n<br>541511 Custom Computer Programming Services\n<br>541513 Computer Facilities Management Services\n<br>561499 All Other Business Support Services\n<br>611430 Professional and Mgmt Development\n<br><br><b>Training\n</b><br>541618 Other Management Consulting Services\n<br>541690 Other Scientific and Technical Consulting\n<br>541820 Public Relations Agencies\n<br>541990 All Other Professional, Scientific, Technical&nbsp;Services\n<br>541614&nbsp;Process, Physical Dist and Logistics&nbsp;Consulting Serv</p></p>\n\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn mt-4\" mbr-if=\"showButtons\"><a class=\"btn btn-success-outline\" href=\"assets/files/D-C-Principlebrochure0810231.pdf\" data-app-placeholder=\"Type Text\" target=\"_blank\">Read More</a></div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
-          "_cid": "u3ztksTZSl",
-          "_anchor": "header06-v",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
@@ -490,40 +439,76 @@
             "padding-top": "(@paddingTop * 1rem)",
             "padding-bottom": "(@paddingBottom * 1rem)",
             "background-color": "@bgColor",
-            "& when (@reverseContent)": {
-              ".row": {
-                "flex-direction": "row-reverse"
-              }
-            },
             ".mbr-text": {
-              "color": "#000000",
-              "text-align": "left"
-            },
-            ".mbr-section-subtitle": {
-              "color": "#000000",
-              "text-align": "left"
-            },
-            ".mbr-section-title": {
-              "text-align": "left",
               "color": "#000000"
             },
-            ".mbr-card-title": {
+            ".mbr-section-subtitle": {
+              "color": "#000000"
+            },
+            ".mbr-section-title": {
               "color": "#000000",
+              "text-align": "center"
+            },
+            ".mbr-text, .item .mbr-section-btn": {
+              "text-align": "left"
+            },
+            ".item-wrapper": {
+              "background": "@cardbg",
+              "margin-bottom": "2rem",
+              "@media (max-width: 767px)": {
+                "padding": "2rem 1.5rem",
+                "margin-bottom": "1rem"
+              },
+              "@media (min-width: 768px) and (max-width: 991px)": {
+                "padding": "2.25rem"
+              },
+              "@media (min-width: 992px)": {
+                "padding": "4rem"
+              }
+            },
+            ".counter-container": {
+              "ul": {
+                "margin": "0",
+                "padding-left": "2.25rem",
+                "list-style": "none",
+                "li": {
+                  "position": "relative",
+                  "list-style": "none",
+                  "margin-bottom": "1rem",
+                  "&:before": {
+                    "position": "absolute",
+                    "left": "-1.5em",
+                    "content": "\"\"",
+                    "display": "flex",
+                    "justify-content": "center",
+                    "align-items": "center",
+                    "color": "@iconColor",
+                    "background-color": "@iconColor",
+                    "width": "0.5em",
+                    "height": "0.5em",
+                    "top": "0.4em",
+                    "border-radius": "50%"
+                  }
+                }
+              }
+            },
+            ".mbr-text UL": {
               "text-align": "left"
             },
             ".mbr-card-subtitle": {
-              "color": "#000000"
+              "color": "#232323",
+              "text-align": "left"
             }
           },
-          "_name": "list03",
+          "_name": "list06",
           "_sourceTheme": "startm5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"list03\" group=\"List\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <input type=\"checkbox\" name=\"reverseContent\" title=\"Reverse\">\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n    <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"9\" value=\"8\" step=\"1\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Main Title\" name=\"showMainTitle\" checked>\n    <input type=\"checkbox\" title=\"Main Subtitle\" name=\"showMainSubtitle\">\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <header>Background</header>\n    <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\">\n  </mbr-parameters>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"col-12 mb-5 content-head\" mbr-if=\"showMainTitle || showMainSubtitle\">\n        <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showMainTitle\" data-app-selector=\".mbr-section-title\">\n          <b>List</b>\n        </h3>\n        <h5 class=\"mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4\" mbr-theme-style=\"display-7\" mbr-if=\"showMainSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        </h5>\n      </div>\n    </div>\n\n    <div class=\"row justify-content-left item features-without-image mt-0 mb-5 active\">\n      <div class=\"col-12 col-md-12 col-lg-3\" mbr-if=\"showTitle\">\n        <h5 class=\"mbr-card-title mbr-fonts-style mt-0 mb-3\" mbr-if=\"showTitle\" data-app-selector=\".mbr-card-title\" mbr-theme-style=\"display-7\">\n          <b>About Us</b>\n        </h5>\n      </div>\n      <div class=\"col-md-12 col-lg-{{textWidth}} item-wrapper\">\n        <p class=\"mbr-text mbr-fonts-style mt-0 mb-0\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-7\">\n          Welcome to Creative Group, where imagination knows no bounds. Founded in 2010, we're a close-knit family of\n          artists, designers, and strategists on a mission to infuse creativity and authenticity into every project.\n          Join us on this inspiring adventure, and let's turn your dreams into reality.\n        </p>\n      </div>\n    </div>\n    <div class=\"row justify-content-left item features-without-image mt-0 mb-5\">\n      <div class=\"col-12 col-md-12 col-lg-3\" mbr-if=\"showTitle\">\n        <h5 class=\"mbr-card-title mbr-fonts-style mt-0 mb-3\" mbr-if=\"showTitle\" data-app-selector=\".mbr-card-title\" mbr-theme-style=\"display-7\">\n          <b>Services</b>\n        </h5>\n      </div>\n      <div class=\"col-md-12 col-lg-{{textWidth}} item-wrapper\">\n        <p class=\"mbr-text mbr-fonts-style mt-0 mb-0\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-7\">\n          Graphic Design, Web Development, Content Creation, Social Media, Management, Branding and Identity, Marketing Strategy, Email Marketing, Copywriting, App Development, Event Planning, Public Relations, Market Research</p>\n      </div>\n    </div>\n    <div class=\"row justify-content-left item features-without-image mt-0 mb-5\">\n      <div class=\"col-12 col-md-12 col-lg-3\" mbr-if=\"showTitle\">\n        <h5 class=\"mbr-card-title mbr-fonts-style mt-0 mb-3\" mbr-if=\"showTitle\" data-app-selector=\".mbr-card-title\" mbr-theme-style=\"display-7\">\n          <b>Contact</b>\n        </h5>\n      </div>\n      <div class=\"col-md-12 col-lg-{{textWidth}} item-wrapper\">\n        <p class=\"mbr-text mbr-fonts-style mt-0 mb-0\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-7\">\n          Connect with us on <a href=\"http://mobiri.se\" class=\"text-primary\">Facebook</a>, <a href=\"http://mobiri.se\" class=\"text-primary\">Instagram</a>, and <a href=\"http://mobiri.se\" class=\"text-primary\">Twitter</a><br>+1 (555) 123-4567<br>contact@yourbusiness.com<br>123 Main Street, Creative City, CA 12345<a href=\"http://mobiri.se\" class=\"text-primary\"><br></a>\n        </p>\n      </div>\n    </div>\n\n  </div>\n</section>",
-          "_cid": "u5MLlfG9u8",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"list06\" group=\"List\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"9\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showMainTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showMainSubtitle\">\n        <input type=\"checkbox\" title=\"Position\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Date\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"List 1\" name=\"showList1\" checked>\n        <input type=\"checkbox\" title=\"List 2\" name=\"showList2\">\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked>\n        <input type=\"color\" title=\"Card BG\" name=\"cardbg\" value=\"#ffffff\" selected>\n        <input type=\"color\" title=\"Bullet Color\" name=\"iconColor\" value=\"#9fe870\" selected>\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#edefeb\">\n    </mbr-parameters>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"col-12 mb-5 content-head\" mbr-if=\"showMainTitle || showMainSubtitle\">\n            <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showMainTitle\" data-app-selector=\".mbr-section-title\"><b>Capabilities Statement</b></h3>\n            <h5 class=\"mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4\" mbr-theme-style=\"display-7\" mbr-if=\"showMainSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n            </h5>\n        </div>\n        <div class=\"row justify-content-center \">\n            <div class=\" col-12 col-lg-{{textWidth}}\">\n                <div class=\"item features-without-image col-12 active\">\n                    <div class=\"item-wrapper\">\n                        <h5 class=\"mbr-card-title mbr-fonts-style mt-0 mb-3\" mbr-if=\"showTitle\" data-app-selector=\".mbr-card-title\" mbr-theme-style=\"display-5\"></h5>\n                        <h6 class=\"mbr-card-subtitle mbr-fonts-style mt-0 mb-4\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-card-subtitle\" mbr-theme-style=\"display-7\">\n                            Stellar Corporation, January 2020 - December 2022<br>\n                        </h6>\n                        <h6 class=\"mbr-card-subtitle mbr-fonts-style mt-0 mb-3\" mbr-if=\"showList1\" data-app-selector=\".mbr-card-subtitle\" mbr-theme-style=\"display-7\">\n                            <b>DESIGNATIONS</b>\n                        </h6>\n                        <div class=\"counter-container mbr-text mbr-fonts-style\" mbr-if=\"showList1\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article>\n                            <ul>\n                                <li>CAGE Code: 9MC36</li>\n                                <li>DUNS#: 112964760</li>\n                            </ul>\n                        </div>\n                        <h6 class=\"mbr-card-subtitle mbr-fonts-style mt-0 mb-3\" mbr-if=\"showList2\" data-app-selector=\".mbr-card-subtitle\" mbr-theme-style=\"display-7\">\n                            <b>Achievements</b>\n                        </h6>\n                        <div class=\"counter-container mbr-text mbr-fonts-style\" mbr-if=\"showList2\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article>\n                            <ul>\n                                <li>Created a fresh logo for a prominent company that garnered positive feedback from\n                                    both its clientele and staff.</li>\n                                <li>Crafted a social media campaign resulting in over 1 million impressions.</li>\n                            </ul>\n                        </div>\n                        <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-white\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Download</a></div>\n                    </div>\n                </div>\n                <div class=\"item features-without-image col-12\">\n                    <div class=\"item-wrapper\">\n                        <h5 class=\"mbr-card-title mbr-fonts-style mt-0 mb-3\" mbr-if=\"showTitle\" data-app-selector=\".mbr-card-title\" mbr-theme-style=\"display-5\">\n                            <b>SMM Manager</b>\n                        </h5>\n                        <h6 class=\"mbr-card-subtitle mbr-fonts-style mt-0 mb-4\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-card-subtitle\" mbr-theme-style=\"display-7\">\n                            Puppy Media, December 2021 - July 2022</h6>\n                        <h6 class=\"mbr-card-subtitle mbr-fonts-style mt-0 mb-3\" mbr-if=\"showList1\" data-app-selector=\".mbr-card-subtitle\" mbr-theme-style=\"display-7\">\n                            <b>NAICS CODES</b></h6>\n                        <div class=\"counter-container mbr-text mbr-fonts-style\" mbr-if=\"showList1\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article>\n                            <ul>\n                                <li>541611 - Administrative Management / General Management Consulting (Primary)</li>\n                                <li>488510 - General Freight Trucking Local\n</li><li>488320 - Marine Cargo Handling</li><li>541330 - Engineering Services\n</li><li>541511 - Custom Computer Programming Services\n</li><li>541513 - Computer Facilities Management Services\n</li><li>561499 - All Other Business Support Services\n</li><li>611430 - Professional and Management Development Training</li><li>541618 - Other Management Consulting Services\n</li><li>541690 - Other Scientific and Technical Consulting\n</li><li>541820 - Public Relations Agencies\n</li><li>541990 - All Other Professional, Scientific, Technical Services\n</li><li>541614 - Process, Physical Distribution and Logistics Consulting Services</li><li>424210 - Personal Health Products</li><li>424120 - Office/School Supplies</li>\n                            </ul>\n                        </div>\n                        <h6 class=\"mbr-card-subtitle mbr-fonts-style mt-0 mb-3\" mbr-if=\"showList2\" data-app-selector=\".mbr-card-subtitle\" mbr-theme-style=\"display-7\">\n                            <b>Achievements</b>\n                        </h6>\n                        <div class=\"counter-container mbr-text mbr-fonts-style\" mbr-if=\"showList2\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article>\n                            <ul>\n                                <li>Designed and developed an advertising campaign.</li>\n                                <li>Increased social media engagement by 20%.</li>\n                                <li>Developed creative concepts for marketing campaigns that resulted in a 10% increase\n                                    in sales.</li>\n                            </ul>\n                        </div>\n                        <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-white\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Download</a></div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "u5N3dxiLew",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
           "_params": {},
-          "_anchor": "list03-z"
+          "_anchor": "list06-11"
         },
         {
           "alias": false,
@@ -854,74 +839,6 @@
           "_global": true,
           "_once": "footers",
           "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "& when not (@fullScreen)": {
-              "padding-top": "(@paddingTop * 1rem)",
-              "padding-bottom": "(@paddingBottom * 1rem)"
-            },
-            "& when (@bg-type = \"color\")": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = \"image\")": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-fallback-image.disabled": {
-              "display": "none"
-            },
-            ".mbr-fallback-image": {
-              "display": "block",
-              "background-size": "cover",
-              "background-position": "center center",
-              "width": "100%",
-              "height": "100%",
-              "position": "absolute",
-              "top": "0",
-              "& when (@bg-type = 'video')": {
-                "background-image": "url(@fallBackImage)"
-              }
-            },
-            ".card-wrapper": {
-              "background": "@wrapBgColor",
-              "@media (max-width: 767px)": {
-                "padding": "2rem 1.5rem"
-              },
-              "@media (min-width: 768px) and (max-width: 991px)": {
-                "padding": "2.25rem"
-              },
-              "@media (min-width: 992px)": {
-                "padding": "4rem"
-              }
-            },
-            ".mbr-text, .mbr-section-btn": {
-              "color": "#000000",
-              "text-align": "left"
-            },
-            ".card-title, .card-box": {
-              "text-align": "left",
-              "color": "#000000"
-            },
-            ".mbr-section-subtitle": {
-              "text-align": "left"
-            },
-            ".mbr-text": {
-              "text-align": "left"
-            },
-            ".mbr-card-title": {
-              "text-align": "left"
-            }
-          },
-          "_name": "list04",
-          "_sourceTheme": "startm5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"list04\" group=\"List\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n  'mbr-fullscreen': fullScreen,\n  'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"8\" max=\"12\" step=\"1\" value=\"10\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showMainTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showMainSubtitle\" checked>\n    <input type=\"checkbox\" title=\"Paragraph Title\" name=\"showTitle\" checked>\n    <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#ffffff\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n      <input type=\"color\" title=\"Color\" value=\"#edefeb\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"card col-md-12 col-lg-{{contentWidth}}\">\n        <div class=\"card-wrapper\">\n          <div class=\"row justify-content-center\">\n            <div class=\"col-12 mb-5 content-head\" mbr-if=\"showMainTitle || showMainSubtitle\">\n              <h3 class=\"card-title mbr-fonts-style mbr-white mt-3\" mbr-theme-style=\"display-2\" mbr-if=\"showMainTitle\" data-app-selector=\".card-title, .card-box\"><b>List:</b></h3>\n              <h5 class=\"mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4\" mbr-theme-style=\"display-7\" mbr-if=\"showMainSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n              </h5>\n            </div>\n          </div>\n\n          <div class=\"row justify-content-left item features-without-image mt-0 mb-5 active\">\n            <div class=\"col-12 col-md-12 col-lg-3\" mbr-if=\"showTitle\">\n              <h5 class=\"mbr-card-title mbr-fonts-style mt-0 mb-3\" mbr-if=\"showTitle\" data-app-selector=\".mbr-card-title\" mbr-theme-style=\"display-7\">\n                <b>Services</b>\n              </h5>\n            </div>\n            <div class=\"col-md-12 col-lg item-wrapper\">\n              <p class=\"mbr-text mbr-fonts-style mt-0 mb-0\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-7\">\n                Graphic Design, Web Development, Content Creation, Social Media, Management, Branding and Identity,\n                Marketing Strategy, Email Marketing, Copywriting, App Development, Event Planning, Public Relations,\n                Market Research\n              </p>\n            </div>\n          </div>\n          <div class=\"row justify-content-left item features-without-image mt-0 mb-5\">\n            <div class=\"col-12 col-md-12 col-lg-3\" mbr-if=\"showTitle\">\n              <h5 class=\"mbr-card-title mbr-fonts-style mt-0 mb-3\" mbr-if=\"showTitle\" data-app-selector=\".mbr-card-title\" mbr-theme-style=\"display-7\">\n                <b>About Us</b>\n              </h5>\n            </div>\n            <div class=\"col-md-12 col-lg item-wrapper\">\n              <p class=\"mbr-text mbr-fonts-style mt-0 mb-0\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-7\">\n                Welcome to Creative Group, where imagination knows no bounds. Founded in 2010, we're a close-knit family\n                of\n                artists, designers, and strategists on a mission to infuse creativity and authenticity into every\n                project.\n                Join us on this inspiring adventure, and let's turn your dreams into reality.\n              </p>\n            </div>\n          </div>\n          <div class=\"row justify-content-left item features-without-image mt-0 mb-5\">\n\n            <div class=\"col-12 col-md-12 col-lg-3 \" mbr-if=\"showTitle\">\n              <h5 class=\"mbr-card-title mbr-fonts-style mt-0 mb-3\" mbr-if=\"showTitle\" data-app-selector=\".mbr-card-title\" mbr-theme-style=\"display-7\">\n                <b>Contact</b>\n              </h5>\n            </div>\n            <div class=\"col-md-12 col-lg\">\n              <p class=\"mbr-text mbr-fonts-style mt-0 mb-0 item-wrapper\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-7\">\n                Connect with us on Facebook, Instagram, and Twitter\n                <br>+1 (555) 123-4567\n                <br>contact@yourbusiness.com\n                <br>123 Main Street, Creative City, CA 12345\n              </p>\n            </div>\n          </div>\n\n\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
-          "_cid": "u5MLlzwe6f",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {},
-          "_anchor": "list04-10"
         }
       ]
     },
